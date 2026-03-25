@@ -1,7 +1,7 @@
-const { chromium } = require('playwright');
+const { firefox } = require('playwright');
 
 async function launchBrowser() {
-  return await chromium.launch({
+  return await firefox.launch({
     headless: false // deixa visível no começo pra debug
   });
 }
