@@ -1,0 +1,46 @@
+[
+  {
+    "name": "rafael",
+    "heygen": {
+      "email": "rbprestes@hotmail.com",
+      "password": "Abc1234*"
+    },
+    "elevenlabs": {
+      "email": "rbprestes@hotmail.com",
+      "password": "abc1234*"
+    }
+  },
+  {
+    "name": "rafael",
+    "heygen": {
+      "email": "rbprestes@hotmail.com",
+      "password": "Abc1234*"
+    },
+    "elevenlabs": {
+      "email": "rbprestes@hotmail.com",
+      "password": "Abc1234*"
+    }
+  },
+  {
+    "name": "rafael",
+    "heygen": {
+      "email": "rbprestes@hotmail.com",
+      "password": "abc1234*"
+    },
+    "elevenlabs": {
+      "email": "rbprestes@hotmail.com",
+      "password": "abc1234*"
+    }
+  },
+  {
+    "name": "rafael",
+    "heygen": {
+      "email": "rbprestes@hotmail.com",
+      "password": "AAAAAAAA"
+    },
+    "elevenlabs": {
+      "email": "rbprestes@hotmail.com",
+      "password": "AAAAAAAA"
+    }
+  }
+]
