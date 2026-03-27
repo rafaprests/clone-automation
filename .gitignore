@@ -1,3 +1,4 @@
 node_modules/
 package-lock.json
 results.json
+data/src/data/users.json
