@@ -16,7 +16,7 @@ function findMediaFiles(userName) {
   const files = fs.readdirSync(basePath);
 
   let video = null;
-  let audio = null;
+  let audios = [];
 
   for (const file of files) {
     const ext = path.extname(file).toLowerCase();
@@ -25,12 +25,12 @@ function findMediaFiles(userName) {
       video = path.join(basePath, file);
     }
 
-    if (!audio && (ext === '.mp3' || ext === '.m4a')) {
-      audio = path.join(basePath, file);
+    if (ext === '.mp3' || ext === '.m4a') {
+      audios.push(path.join(basePath, file));
     }
   }
 
-  return { video, audio };
+  return { video, audios };
 }
 
 module.exports = { findMediaFiles };

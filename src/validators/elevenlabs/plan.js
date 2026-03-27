@@ -1,14 +1,8 @@
 async function getElevenLabsPlan(page) {
   try {
-    const profileButton = page.getByRole('button', { name: 'Seu perfil' });
-    await profileButton.click();
+    await page.getByTestId('user-menu-button').first().click();
 
-    const subscriptionLink = page.getByRole('link', { name: 'Assinatura', exact: true });
-    await subscriptionLink.click();
-
-    const planText = await page
-      .getByText(/Você está atualmente no plano/i)
-      .innerText();
+    const planText = await page.locator('text=/Free plan|Creator|Plano Free/i').first().innerText();
 
     const isCreator = /creator/i.test(planText);
 
@@ -17,7 +11,9 @@ async function getElevenLabsPlan(page) {
       plan: isCreator ? 'creator' : 'free'
     };
 
-  } catch {
+  } catch (err) {
+    console.log('Plan Check Error:', err.message);
+
     return {
       success: false,
       error: 'plan_check_failed'

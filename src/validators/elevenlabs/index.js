@@ -5,13 +5,21 @@ async function validateElevenLabs(page, email, password) {
   const login = await loginElevenLabs(page, email, password);
 
   if (!login.success) {
-    return login;
+    return {
+      success: false,
+      stage: 'login',
+      error: login.error
+    };
   }
 
   const plan = await getElevenLabsPlan(page);
 
   if (!plan.success) {
-    return plan;
+    return {
+      success: false,
+      stage: 'plan',
+      error: plan.error
+    };
   }
 
   return {
